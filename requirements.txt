@@ -8,7 +8,7 @@ pymupdf
 wikipedia
 langchain-text-splitters
 langchain_ollama
-langchai_groq
+langchain_groq
 langchain_openai
 pandas
 numpy

@@ -1,0 +1,13 @@
+prefix=F:/Generative-AI-Projects/genai_projects/Library
+exec_prefix=F:/Generative-AI-Projects/genai_projects/Library
+libdir=F:/Generative-AI-Projects/genai_projects/Library/lib
+sharedlibdir=F:/Generative-AI-Projects/genai_projects/Library/lib
+includedir=F:/Generative-AI-Projects/genai_projects/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.3.1
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
