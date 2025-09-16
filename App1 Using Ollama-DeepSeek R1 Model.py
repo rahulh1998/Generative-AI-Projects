@@ -39,3 +39,24 @@ if question:
     st.write(response)
 
 
+# Initialize the model
+# ollama_model_name = "gemma3:4b"
+# embedding_model = "embeddinggemma:300m"
+
+# # Loading the models
+# import subprocess
+# subprocess.run(["ollama","pull",ollama_model_name])
+# subprocess.run(["ollama","pull",embedding_model])
+
+# Initialize the LLM and Embeddings
+# llm = OllamaLLM(model=ollama_model_name, temperature=0.1, max_tokens=512)
+# embeddings = OllamaEmbeddings(model=embedding_model)
+
+# Get question from user
+# question = st.text_input("Enter your question:", key="question_input")
+
+# # Create a prompt template
+# prompt = PromptTemplate(
+#     input_variables=["question"],
+#     template="""You an expert in responding. Give proper understandable responses to the Question: {question}"""
+# )
