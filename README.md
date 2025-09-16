@@ -1,1 +1,1 @@
-# Genal-With-Langchain-Hugging-Face
+# GenAl-With-Langchain-Hugging-Face
