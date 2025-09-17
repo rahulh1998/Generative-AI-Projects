@@ -90,10 +90,11 @@ if uploaded_files:
     question_answer_chain = create_stuff_documents_chain(llm,question_answer_prompt)
     rag_chain = create_retrieval_chain(history_aware_retriever,question_answer_chain)
 
-    def get_session_history(session_id:str)->BaseChatMessageHistory:
-        if session_id not in st.session_id.store:
-            st.session_state.store[session_id] = ChatMessageHistory()
-        return st.session_state.store[session_id]
+    def get_session_history(session: str) -> BaseChatMessageHistory:
+        if session not in st.session_state.store:
+            st.session_state.store[session] = ChatMessageHistory()
+        return st.session_state.store[session]
+
     
     conversational_rag_chain = RunnableWithMessageHistory(
         rag_chain, get_session_history,
