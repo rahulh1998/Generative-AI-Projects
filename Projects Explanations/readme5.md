@@ -1,21 +1,3 @@
-flowchart TD
-    A[User Uploads PDFs] --> B[PyPDFLoader Loads Text]
-    B --> C[RecursiveCharacterTextSplitter Splits Text]
-    C --> D[HuggingFace Embeddings Create Vectors]
-    D --> E[Chroma Vector Store]
-
-    F[User Question] --> G[History-Aware Retriever]
-    G --> H[Reformulated Question]
-    H --> I[Retriever Fetches Relevant Chunks]
-    I --> J[QA Prompt + LLM]
-    J --> K[Answer Generated]
-
-    E --> I
-    K --> L[Assistant Response]
-    L --> M[Chat History Stored]
-    M --> G
-
-
 # 📄 Conversational RAG with PDF  
 
 This project implements a **Conversational RAG (Retrieval-Augmented Generation)** pipeline using PDFs as a knowledge source.  
@@ -140,3 +122,19 @@ Finally, everything is tied together with a **Streamlit app**:
 This creates a powerful **Conversational RAG system with memory** that allows smooth interaction with uploaded PDFs.
 
 ---
+flowchart TD
+    A[User Uploads PDFs] --> B[PyPDFLoader Loads Text]
+    B --> C[RecursiveCharacterTextSplitter Splits Text]
+    C --> D[HuggingFace Embeddings Create Vectors]
+    D --> E[Chroma Vector Store]
+
+    F[User Question] --> G[History-Aware Retriever]
+    G --> H[Reformulated Question]
+    H --> I[Retriever Fetches Relevant Chunks]
+    I --> J[QA Prompt + LLM]
+    J --> K[Answer Generated]
+
+    E --> I
+    K --> L[Assistant Response]
+    L --> M[Chat History Stored]
+    M --> G
