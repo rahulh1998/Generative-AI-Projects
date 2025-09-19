@@ -12,3 +12,5 @@ langchain_groq
 langchain_openai
 pandas
 numpy
+arxiv
+wikipedia
