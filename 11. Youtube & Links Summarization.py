@@ -47,15 +47,17 @@ if st.button("Summarize the content of Youtube or Website"):
                 # Loading the data
                 if 'youtube.com' in url:
                     loader = YoutubeLoader.from_youtube_url(url, 
-                                                            add_video_info = True)
+                                                            add_video_info = False,
+                                                              language="en",)
                 else:
                     loader = UnstructuredURLLoader(urls = [url] , 
-                                                   ssl_verify = True)
+                                                   ssl_verify = False,
+                                                   headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"})
                 docs = loader.load()
 
                 # Chain Summarization
                 chain = load_summarize_chain(llm, chain_type="stuff", prompt = prompt)
-                output_summary = chain.run(docs)
+                output_summary = chain.invoke(docs)
 
                 st.success(output_summary)
 
