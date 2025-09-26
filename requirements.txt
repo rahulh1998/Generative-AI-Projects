@@ -17,3 +17,4 @@ wikipedia
 ddgs
 validators
 youtube_transcript_api
+pytube
