@@ -15,7 +15,6 @@ numpy
 arxiv
 wikipedia
 ddgs
-validators
+validators==0.28.1
 youtube_transcript_api
 pytube
-unstructured
