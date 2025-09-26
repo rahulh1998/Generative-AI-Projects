@@ -15,3 +15,5 @@ numpy
 arxiv
 wikipedia
 ddgs
+validators
+youtube_transcript_api
